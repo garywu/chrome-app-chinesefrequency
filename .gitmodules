@@ -7,3 +7,6 @@
 [submodule "obj/freq"]
 	path = obj/freq
 	url = https://github.com/pffy/javascript-chinese-frequency
+[submodule "js"]
+	path = js
+	url = https://github.com/pffy/javascript-app-support
