@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="gstatic/docs/script/css/add-ons.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+  </head>
+  <body>
+
+  <h1><span class="kaiti accent">汉字频率表</span>
+    Chinese Frequency App
+  <span class="version">Preview</span></h1>
+  <button id="convertbtn" class="action">Count</button>
+  <button id="clearbtn">Clear</button>
+
+  <a id="sampletxt" href="#">sample text</a>
+
+  <br/>
+  <table id="teaset">
+  <tr>
+  <td>
+  <textarea class="kaiti" name="source" id="source"
+  placeholder="Copy and paste 汉字 Chinese text here."></textarea>
+  </td>
+  <td>
+  <textarea class="fixed" name="result" id="result" READONLY></textarea>
+  </td>
+  <td valign="top">
+    <div id="options">
+<!--
+  <button disabled id="savebtntxt">Save As Summary Report</button><br/>
+  <br/>
+  <button disabled id="savebtncsv">Save As CSV</button><br/>
+  <button disabled id="savebtntsv">Save As TSV</button><br/>
+  <button disabled id="savebtnwcu">Save As WCU (for Mnemosyne SRS)</button><br/>
+  <button disabled id="savebtnxml">Save As XML (for Anki SRS)</button><br/>
+  <button disabled id="savebtntxtrep">Save As TXT (for Repititions SRS)</button><br/>
+  <button disabled id="savebtntxtmc">Save As TXT (for MentalCase SRS)</button><br/>
+
+  <br/>
+  <b>Options:</b><br/>
+  <input type="checkbox" name="ignorepunct" value="1">
+  Ignore punctuation in Total Count.
+-->
+  </div>
+  </td>
+  </tr>
+  </table>
+
+  <button id="savebtn">Save As Text</button>
+  <br/><br/>
+
+
+  <div id="msgbox">&nbsp;</div>
+
+  <!-- support files -->
+  <script src="js/util.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+  <script src="sample/sampletxt.js"></script>
+
+  <!-- objects -->
+  <script src="obj/freq/idx-extrapinyin.js"></script>
+  <script src="obj/freq/idx-hanyupinyin-micro.js"></script>
+  <script src="obj/freq/chinese-frequency.js"></script>
+  <script src="obj/obj.js"></script>
+
+  <!-- customize -->
+  <script src="config.js"></script>
+  </body>
+</html>
+
+
+<!--
+/**
+ * name     : index.html
+ * version  : -
+ * updated  : 2015-08-05
+ * license  : http://unlicense.org/ The Unlicense
+ * git      : https://github.com/pffy/chrome-app-chinesefrequency
+ *
+ */
+-->

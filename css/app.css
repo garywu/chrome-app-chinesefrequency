@@ -1,0 +1,89 @@
+h1 {
+  font-size: 24pt;
+}
+
+select {
+  margin-left: 10px;
+}
+
+button {
+  margin-bottom: 5px;
+}
+
+textarea {
+  min-width: 250px;
+  min-height: 250px;
+  height: 395px;
+  color: black;
+}
+
+img.spinner {
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  padding: 16px;
+}
+
+#teaset {
+  width: 625px;
+}
+
+#sampletxt {
+  padding-left: 10px;
+}
+
+#source {
+  background-color: #efefef;
+  width: 400px;
+  font-size: 14pt;
+}
+
+#result {
+  width: 300px;
+  font-size: 11pt;
+  margin-right: 15px;
+}
+
+#options {
+  width: 300px;
+}
+
+#savebox {
+  margin-top: 16px;
+}
+
+#msgbox {
+  font-weight: bold;
+}
+
+#footer {
+  margin-top: 16px;
+}
+
+.version {
+  font-size:10pt;
+  color: gray;
+}
+
+.kaiti {
+  font-family: "WenQuanYi Micro Hei", "UKai", "STKaiTi", "KaiTi";
+}
+
+.fixed {
+  font-family: "Courier", "New Courier";
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+
+/**
+ * name     : app.css
+ * version  : 1
+ * updated  : 2015-08-05
+ * license  : http://unlicense.org/ The Unlicense
+ * git      : https://github.com/pffy/chrome-app-chinesefrequency
+ *
+ */

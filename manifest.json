@@ -1,0 +1,38 @@
+{
+  "name": "Chinese Frequency App",
+  "short_name": "#CountChinese",
+
+  "description": "Counts Chinese characters. Save frequency lists and reports.",
+
+  "version": "1",
+  "version_name": "v1-preview (pffy.cloud.garganelli)",
+
+  "author": {
+    "name": "The Pffy Authors",
+    "url": "https://github.com/pffy"
+  },
+
+  "offline_enabled": true,
+  "minimum_chrome_version": "39",
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  },
+
+  "permissions": [
+    "storage",
+    { "fileSystem":
+      [ "write" ]
+    }
+  ],
+
+  "icons": {
+    "16": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+
+  "manifest_version": 2
+}
