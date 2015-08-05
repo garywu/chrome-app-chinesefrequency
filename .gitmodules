@@ -1,0 +1,6 @@
+[submodule "gstatic"]
+	path = gstatic
+	url = https://github.com/pffy/google-docs-addon-css-packages
+[submodule "icons"]
+	path = icons
+	url = https://github.com/pffy/icon-decanter
