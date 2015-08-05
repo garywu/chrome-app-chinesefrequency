@@ -37,5 +37,6 @@
 function convertUsingObjects(str) {
 	var obj = new ChineseFrequency();
   obj.setInput(str);
+  app.csvfile = obj.getCsv();
 	return '' + obj.getTxt();
 }
