@@ -27,7 +27,7 @@
 
 /**
  * name     : obj.js
- * version  : 1
+ * version  : 2
  * updated  : 2015-08-05
  * license  : http://unlicense.org/ The Unlicense
  * git      : https://github.com/pffy/chrome-app-chinesefrequency
@@ -37,6 +37,10 @@
 function convertUsingObjects(str) {
 	var obj = new ChineseFrequency();
   obj.setInput(str);
-  app.csvfile = obj.getCsv();
+  app.csvfile = obj.getCsv(); // csv data
+  app.datarange = obj.getDataRange(); // arrays of arrays
+  if(app.datarange && app.datarange.length) {
+    turnExportButtonsOn();
+  }
 	return '' + obj.getTxt();
 }
