@@ -27,7 +27,7 @@
 
 /**
  * name     : export.js
- * version  : 3
+ * version  : 5
  * updated  : 2015-08-05
  * license  : http://unlicense.org/ The Unlicense
  * git      : https://github.com/pffy/chrome-app-chinesefrequency
@@ -38,7 +38,7 @@
 function exportAsCsv() {
   // .csv
 
-  var outfile = app.prefix + '-export-' + generateFileId() + '.csv';
+  var outfile = app.prefix + '-csvexport-' + generateFileId() + '.csv';
   var fileOptions = { type: 'saveFile', suggestedName: outfile };
 
   chrome.fileSystem.chooseEntry(fileOptions, function(writableFileEntry) {
@@ -65,7 +65,7 @@ function exportAsTsv() {
     return ; // derp
   }
 
-  var outfile = app.prefix + '-export-' + generateFileId() + '.tsv';
+  var outfile = app.prefix + '-tsvexport-' + generateFileId() + '.tsv';
   var fileOptions = { type: 'saveFile', suggestedName: outfile };
 
   chrome.fileSystem.chooseEntry(fileOptions, function(writableFileEntry) {
@@ -92,7 +92,7 @@ function exportToAnkiSrs() {
     return ; // derp
   }
 
-  var outfile = app.prefix + '-export-anki-srs-' + generateFileId() + '.xml';
+  var outfile = app.prefix + '-xmlexport-anki-srs-' + generateFileId() + '.xml';
   var fileOptions = { type: 'saveFile', suggestedName: outfile };
 
   chrome.fileSystem.chooseEntry(fileOptions, function(writableFileEntry) {
@@ -119,7 +119,7 @@ function exportToMnemosyneSrs() {
     return ; // derp
   }
 
-  var outfile = app.prefix + '-export-mnemosyne-srs-' + generateFileId() + '.wcu';
+  var outfile = app.prefix + '-wcuexport-mnemosyne-srs-' + generateFileId() + '.wcu';
   var fileOptions = { type: 'saveFile', suggestedName: outfile };
 
   chrome.fileSystem.chooseEntry(fileOptions, function(writableFileEntry) {
@@ -142,11 +142,11 @@ function exportToRepetitionsSrs() {
   // convertRangeToHzPyCsv
   // .txt
 
-  if(!convertRangeToHzPyCsv()) {
+  if(!convertCsvToTsv()) {
     return ; // derp
   }
 
-  var outfile = app.prefix + '-export-repetitions-srs-' + generateFileId() + '.txt';
+  var outfile = app.prefix + '-tsvexport-repetitions-srs-' + generateFileId() + '.txt';
   var fileOptions = { type: 'saveFile', suggestedName: outfile };
 
   chrome.fileSystem.chooseEntry(fileOptions, function(writableFileEntry) {
@@ -156,7 +156,7 @@ function exportToRepetitionsSrs() {
         console.info('done writing.');
         console.info(e);
       };
-      writer.write(new Blob(['' + app.hzpyfile], { type: 'text/plain' }));
+      writer.write(new Blob(['' + app.tsvfile], { type: 'text/plain' }));
     }, exportErrorHandler);
 
     chrome.fileSystem.getDisplayPath(writableFileEntry, function (displayPath) {
@@ -174,7 +174,7 @@ function exportToMentalCaseSrs() {
     return ; // derp
   }
 
-  var outfile = app.prefix + '-export-mentalcase-srs-' + generateFileId() + '.csv';
+  var outfile = app.prefix + '-csvexport-mentalcase-srs-' + generateFileId() + '.csv';
   var fileOptions = { type: 'saveFile', suggestedName: outfile };
 
   chrome.fileSystem.chooseEntry(fileOptions, function(writableFileEntry) {
