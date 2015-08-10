@@ -10,3 +10,6 @@
 [submodule "js"]
 	path = js
 	url = https://github.com/pffy/javascript-app-support
+[submodule "obj/tp"]
+	path = obj/tp
+	url = https://github.com/pffy/javascript-tonelesspinyin
