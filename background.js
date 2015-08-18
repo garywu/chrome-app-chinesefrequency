@@ -26,7 +26,7 @@
  */
 
 /**
- * name     : bacgkround.js
+ * name     : background.js
  * version  : 1
  * updated  : 2015-08-05
  * license  : http://unlicense.org/ The Unlicense
