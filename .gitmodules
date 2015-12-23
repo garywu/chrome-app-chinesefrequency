@@ -1,9 +1,6 @@
 [submodule "gstatic"]
 	path = gstatic
 	url = https://github.com/pffy/google-docs-addon-css-packages
-[submodule "icons"]
-	path = icons
-	url = https://github.com/pffy/icon-decanter
 [submodule "obj/freq"]
 	path = obj/freq
 	url = https://github.com/pffy/javascript-chinese-frequency
